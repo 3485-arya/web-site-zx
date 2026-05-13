@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Texura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">TEXURA</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <h1 style="text-align: center; margin-top: 40px;">Our Collection</h1>
+
+    <section class="product-container">
+        <!-- Product 1 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=300&q=80" alt="White Tee" style="width:100%; border-radius: 5px;">
+            <h3>Essential White Tee</h3>
+            <p>$25.00</p>
+            <button class="btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=300&q=80" alt="Jeans" style="width:100%; border-radius: 5px;">
+            <h3>Classic Blue Jeans</h3>
+            <p>$55.00</p>
+            <button class="btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=300&q=80" alt="Jacket" style="width:100%; border-radius: 5px;">
+            <h3>Modern Bomber Jacket</h3>
+            <p>$85.00</p>
+            <button class="btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
