@@ -1,13 +1,13 @@
-// Initialize cart from localStorage or set to 0
+// This part helps the browser remember your items
 let cartCount = localStorage.getItem('texuraCart') ? parseInt(localStorage.getItem('texuraCart')) : 0;
 
-// Update the number on the screen immediately when page loads
+// Run these functions as soon as the page loads
 updateCartDisplay();
+displayCartStatus();
 
 function addToCart() {
     cartCount++;
-    // Save the new number to the browser's "notebook"
-    localStorage.setItem('texuraCart', cartCount);
+    localStorage.setItem('texuraCart', cartCount); // Save to memory
     updateCartDisplay();
     alert("Added to your Texura bag!");
 }
@@ -19,20 +19,22 @@ function updateCartDisplay() {
     }
 }
 
-// Check if we are on the Shopping Bag page (cart.html)
-if (window.location.pathname.includes('cart.html')) {
+function displayCartStatus() {
+    // This finds the section you have in 1000073628.jpg
     const cartSection = document.querySelector('.cart-section');
-    if (cartCount > 0) {
+    
+    if (cartSection && cartCount > 0) {
         cartSection.innerHTML = `
             <h1>Shopping Bag</h1>
-            <p>You have ${cartCount} item(s) in your bag.</p>
+            <p>You have <strong>${cartCount}</strong> item(s) in your bag.</p>
             <button class="btn" onclick="clearCart()">Clear Bag</button>
-            <a href="shop.html" class="btn" style="display:inline-block; margin-top:20px; text-decoration:none;">Continue Shopping</a>
+            <br><br>
+            <a href="shop.html" class="btn" style="display:inline-block; text-decoration:none;">Add More Items</a>
         `;
     }
 }
 
 function clearCart() {
     localStorage.removeItem('texuraCart');
-    location.reload(); // Refresh to show empty cart
+    location.reload(); // Refresh the page to show it's empty
 }
