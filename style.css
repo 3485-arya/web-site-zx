@@ -72,14 +72,75 @@ nav ul li a:hover {
     letter-spacing: 1px;
 }
 
-/* --- Product Grid Layout --- */
+/* --- TEXTURA PREMIUM STYLING OVERRIDE --- */
+
+/* 1. Grid spacing ko responsive aur clean banana */
 .product-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* 2 items side-by-side on mobile */
-    gap: 16px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 30px !important;
+    padding: 30px 15px !important;
+}
+
+/* 2. Cards ko modern drop-shadow aur curve dena */
+.card {
+    background: #ffffff !important;
+    border: none !important; 
+    border-radius: 12px !important;     
+    padding: 20px !important;
+    text-align: center !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Hover lift effect */
+.card:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* 3. Images ka size perfectly set aur crop alignment balance karna */
+.card img {
+    width: 100% !important;
+    height: 260px !important;
+    object-fit: cover !important; 
+    border-radius: 8px !important;
+    margin-bottom: 15px !important;
+}
+
+/* 4. Text and Price Styling */
+.card h3 {
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    margin: 10px 0 6px 0 !important;
+}
+
+/* Humne rs suffix ko handle karne ke liye generic selector rakha hai */
+.card p {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #555 !important; 
+    margin-bottom: 15px !important;
+}
+
+/* 5. Sleek Boutique Style Buttons */
+.card button {
+    width: 100% !important;
+    background: #111111 !important; 
+    color: #ffffff !important;
+    border: none !important;
+    padding: 12px 0 !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: background 0.2s ease !important;
+}
+
+.card button:hover {
+    background: #333333 !important; 
 }
 
 /* --- Clean Product Cards --- */
